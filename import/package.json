@@ -1,0 +1,19 @@
+{
+  "name": "@coininfo/client",
+  "version": "1.0.0",
+  "description": "Simple Javascript Test Client",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"node index.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:PopeNobody-back4app",
+    "path": "client"
+  },
+  "author": "coininfo@copblock.app",
+  "license": "ISC",
+  "dependencies": {
+    "@types/parse": "^3.0.9"
+  }
+}

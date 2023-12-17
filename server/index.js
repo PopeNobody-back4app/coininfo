@@ -8,15 +8,17 @@ const __dirname = path.resolve();
 import http from 'http';
 
 export const config = {
-  databaseURI:
-    process.env.DATABASE_URI || process.env.MONGODB_URI || 'mongodb://localhost:27017/dev',
-  cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
-  appId: process.env.APP_ID || 'myAppId',
-  masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
-  serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse', // Don't forget to change to https if needed
+  databaseURI: "postgresql://coininfo:password@localhost:5432/",
+  cloud: __dirname + '/cloud/main.cjs',
+  appId: 'coininfo',
+  appName: 'CoinInfo',
+  masterKey: 'coininfo.masterKey', //Add your master key here. Keep it secret!
+  serverURL: 'http://localhost:1337/parse', // Don't forget to change to https if needed
+  publicServerURL: 'http://localhost:1337/parse', // Don't forget to change to https if needed
   liveQuery: {
     classNames: ['Posts', 'Comments'], // List of classes to support for query subscriptions
   },
+  emailAdapter: '@coininfo/Mail',
 };
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
 // If you wish you require them, you can set them as options in the initialization above:

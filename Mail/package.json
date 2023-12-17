@@ -1,0 +1,12 @@
+{
+  "name": "@coininfo/Mail",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:PopeNobody-back4app", 
+    "path": "Mail"
+  }, 
+  "author": "coininfo@copblock.app"
+}
